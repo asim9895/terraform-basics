@@ -1,7 +1,19 @@
+variable "access_key" {
+    description = "access key for iam user"
+}
+
+variable "secret_key" {
+    description = "access key for iam user"
+}
+
+variable "region" {
+    description = "access key for iam user"
+}
+
 provider "aws" {
-    region = "ap-south-1"
-    access_key = "AKIAWUM7WP3JU5PO5CER"
-    secret_key = "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"
+    region = var.region
+    access_key = var.access_key
+    secret_key = var.secret_key
 }
 
 variable "subnet_1_cidr_block" {
